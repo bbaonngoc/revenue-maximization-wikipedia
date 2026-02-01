@@ -1,4 +1,4 @@
-# Revenue Maximization (RM) trên mạng thảo luận Wikipedia
+# Tối đa hoá doanh thu trên mạng thảo luận Wikipedia
 
 ## 1. Mô tả bài toán
 
