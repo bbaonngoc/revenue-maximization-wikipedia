@@ -29,7 +29,6 @@ Với một tập con các đỉnh được chọn \(S \subseteq V\) (tập seed
 
 trong đó:
 - \(\alpha \in (0,1]\) là tham số điều chỉnh mức độ lợi suất giảm dần (diminishing returns).
-- Trường hợp \(\alpha = 1/2\) tương ứng với dạng căn bậc hai thường được sử dụng trong các mô hình lan truyền ảnh hưởng.
 
 Hàm \(f(S)\) đo lường tổng mức ảnh hưởng mà tập seed \(S\) tác động lên các đỉnh chưa được chọn, và mang tính **dưới mô-đun (submodular)** khi \(0 < \alpha \le 1\).
 
