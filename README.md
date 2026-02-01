@@ -13,9 +13,8 @@ Mỗi cạnh \((u, v)\) được gán một **trọng số dương** \(w(u, v)\)
 
 Mỗi đỉnh \(u \in V\) được gán một **chi phí dương** \(c(u)\), được xác định dựa trên tổng trọng số các cạnh liên quan đến đỉnh đó:
 
-\[
- c(u) = 1 - e^{-0.2 \sqrt{\sum_{(u,v) \in E} w(u,v)}}.
-\]
+<img width="280" height="180" alt="Ảnh màn hình 2026-02-01 lúc 16 35 42" src="https://github.com/user-attachments/assets/841f8a81-53db-4ef1-a97d-129e2e1e6b55" />
+
 
 Công thức này đảm bảo:
 - Chi phí \(c(u)\) tăng khi mức độ kết nối (tổng trọng số cạnh) của đỉnh \(u\) tăng.
@@ -25,9 +24,8 @@ Công thức này đảm bảo:
 
 Với một tập con các đỉnh được chọn \(S \subseteq V\) (tập seed), **doanh thu** thu được từ \(S\) được xác định bởi hàm:
 
-\[
- f(S) = \sum_{v \in V \setminus S} \left( \sum_{u \in S} w(u, v) \right)^{\alpha},
-\]
+<img width="250" height="180" alt="Ảnh màn hình 2026-02-01 lúc 16 36 28" src="https://github.com/user-attachments/assets/45b11251-0938-41f9-8868-41f27e9bb106" />
+
 
 trong đó:
 - \(\alpha \in (0,1]\) là tham số điều chỉnh mức độ lợi suất giảm dần (diminishing returns).
@@ -39,17 +37,13 @@ Hàm \(f(S)\) đo lường tổng mức ảnh hưởng mà tập seed \(S\) tác
 
 Cho một **ngân sách** \(B > 0\). Một tập seed \(S\) được coi là hợp lệ nếu tổng chi phí không vượt quá ngân sách:
 
-\[
- \sum_{u \in S} c(u) \le B.
-\]
+<img width="180" height="85" alt="Ảnh màn hình 2026-02-01 lúc 16 36 46" src="https://github.com/user-attachments/assets/402fe0e9-c3dc-4bcd-86a8-4e34130146c7" />
 
 ## 5. Mục tiêu tối ưu
 
 Mục tiêu của bài toán **Revenue Maximization (RM)** là:
 
-\[
- \max_{S \subseteq V} f(S) \quad \text{sao cho} \quad \sum_{u \in S} c(u) \le B.
-\]
+<img width="450" height="85" alt="Ảnh màn hình 2026-02-01 lúc 16 37 15" src="https://github.com/user-attachments/assets/b5617ebc-d5d4-419d-991e-b2e10e2001ef" />
 
 Nói cách khác, bài toán yêu cầu lựa chọn một tập người dùng ban đầu (seed set) sao cho:
 - Tổng chi phí kích hoạt không vượt quá ngân sách cho phép.
