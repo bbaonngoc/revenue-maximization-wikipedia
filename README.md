@@ -56,3 +56,37 @@ Trong mạng thảo luận Wikipedia:
 - Tập seed \(S\) có thể được hiểu là nhóm người dùng được ưu tiên kêu gọi, gợi ý hoặc tác động.
 
 
+
+```mermaid
+flowchart TD
+    START([Bắt đầu]) --> INPUT[/Nhập: graph, nodes, costs, budget, alpha/]
+    INPUT --> INIT["S ← ∅, w_sum ← {}, heap ← []"]
+    
+    INIT --> INIT_LOOP["Với mỗi đỉnh u có cost ≤ budget"]
+    INIT_LOOP --> CALC_GAIN["Tính gain(u) = Δ(u|∅)"]
+    CALC_GAIN --> PUSH_HEAP["Push (u, gain, cost, iteration=0) vào heap"]
+    PUSH_HEAP --> CHECK_MORE{Còn đỉnh?}
+    CHECK_MORE -->|Có| INIT_LOOP
+    CHECK_MORE -->|Không| MAIN_LOOP
+    
+    MAIN_LOOP{heap rỗng?}
+    MAIN_LOOP -->|Có| FINAL["Tính revenue từ w_sum"]
+    MAIN_LOOP -->|Không| POP["u ← pop(heap)"]
+    
+    POP --> CHECK_BUDGET{"cost(u) > remaining?"}
+    CHECK_BUDGET -->|Có| MAIN_LOOP
+    CHECK_BUDGET -->|Không| CHECK_FRESH{"iteration = current?"}
+    
+    CHECK_FRESH -->|Không - Cũ| RECOMPUTE["Tính lại gain(u) từ w_sum"]
+    RECOMPUTE --> REPUSH["Push lại u với gain mới"]
+    REPUSH --> MAIN_LOOP
+    
+    CHECK_FRESH -->|Có - Mới| SELECT["S ← S ∪ {u}"]
+    SELECT --> UPDATE_BUDGET["remaining -= cost(u)"]
+    UPDATE_BUDGET --> UPDATE_WSUM["Cập nhật w_sum[v] += w(u,v)"]
+    UPDATE_WSUM --> INC_ITER["iteration++"]
+    INC_ITER --> MAIN_LOOP
+    
+    FINAL --> OUTPUT[/Xuất: S, revenue, total_cost/]
+    OUTPUT --> END([Kết thúc])
+```
