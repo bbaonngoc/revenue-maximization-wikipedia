@@ -9,7 +9,7 @@ Triển khai theo yêu cầu:
 
 import heapq
 from collections import defaultdict
-from utils import total_cost, print_result
+from .utils import total_cost, print_result
 
 
 class CELFHeapItem:
@@ -181,8 +181,8 @@ def celf_optimized(graph, nodes, costs, budget, alpha=0.5, verbose=True):
 
 if __name__ == "__main__":
     import random
-    from config import BUDGET, ALPHA, SEED, FILTERED_DATA_PATH
-    from utils import load_graph, compute_node_costs
+    from .config import BUDGET, ALPHA, SEED, FILTERED_DATA_PATH
+    from .utils import load_graph, compute_node_costs
     
     random.seed(SEED)
     

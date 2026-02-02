@@ -7,9 +7,9 @@ Chạy thuật toán CELF với ngân sách được cấu hình trong config.py
 import os
 import time
 import random
-from config import BUDGET, ALPHA, SEED, FILTERED_DATA_PATH, RAW_DATA_PATH
-from utils import load_graph, compute_node_costs
-from celf import celf_optimized as celf_revenue_maximization
+from src.config import BUDGET, ALPHA, SEED, FILTERED_DATA_PATH, RAW_DATA_PATH
+from src.utils import load_graph, compute_node_costs
+from src.celf import celf_optimized as celf_revenue_maximization
 
 
 def run_experiment(graph, nodes, costs, budget, alpha=0.5):

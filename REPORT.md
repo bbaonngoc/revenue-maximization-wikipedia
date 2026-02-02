@@ -160,14 +160,18 @@ $$\Delta(u|S) = \sum_{v: u \to v, v \notin S} \left[ (w\_sum[v] + w(u,v))^\alpha
 
 ```
 revenue-maximization/
-├── config.py              # Cấu hình tham số (BUDGET, ALPHA, SEED,...)
-├── main.py                # Điểm khởi chạy chính
-├── celf.py                # Thuật toán CELF tối ưu
-├── greedy.py              # Thuật toán Greedy (baseline)
-├── utils.py               # Các hàm tiện ích
-├── preprocess.py          # Tiền xử lý dữ liệu
-├── verify_correctness.py  # Kiểm tra độ chính xác
-├── REPORT.md              # Báo cáo dự án
+├── main.py                    # File khởi chạy chính
+├── REPORT.md                  # Báo cáo dự án
+├── README.md                  # Giới thiệu bài toán
+├── .gitignore                 # Ẩn file không cần thiết
+├── src/                       # Module chính
+│   ├── __init__.py
+│   ├── config.py              # Cấu hình tham số (BUDGET, ALPHA, SEED,...)
+│   ├── celf.py                # Thuật toán CELF tối ưu
+│   ├── greedy.py              # Thuật toán Greedy (baseline)
+│   ├── utils.py               # Các hàm tiện ích
+│   ├── preprocess.py          # Tiền xử lý dữ liệu
+│   └── verify_correctness.py  # Kiểm tra độ chính xác thuật toán
 └── data/
     ├── wiki-Talk.txt          # Dữ liệu gốc
     └── wiki-talk-filtered.txt # Dữ liệu đã lọc
@@ -177,10 +181,13 @@ revenue-maximization/
 
 | Module | Chức năng |
 |--------|-----------|
-| `config.py` | Tập trung tham số: B, α, SEED, đường dẫn dữ liệu |
-| `utils.py` | load_graph, compute_node_costs, compute_marginal_gain |
-| `celf.py` | Thuật toán CELF với incremental w_sum |
-| `main.py` | Điều phối chạy thử nghiệm |
+| `main.py` | Điểm khởi chạy, điều phối thử nghiệm |
+| `src/config.py` | Tập trung tham số: B, α, SEED, đường dẫn dữ liệu |
+| `src/utils.py` | load_graph, compute_node_costs, các hàm tiện ích |
+| `src/celf.py` | Thuật toán CELF với incremental w_sum |
+| `src/greedy.py` | Thuật toán Greedy cơ bản (baseline) |
+| `src/preprocess.py` | Lọc và tiền xử lý dữ liệu Wiki-Talk |
+| `src/verify_correctness.py` | So sánh và kiểm tra độ chính xác |
 
 ---
 

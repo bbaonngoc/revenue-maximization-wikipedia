@@ -8,9 +8,9 @@ So sánh với:
 
 import random
 import time
-from config import BUDGET, ALPHA, SEED, FILTERED_DATA_PATH
-from utils import load_graph, compute_node_costs
-from celf import celf_optimized
+from .config import BUDGET, ALPHA, SEED, FILTERED_DATA_PATH
+from .utils import load_graph, compute_node_costs
+from .celf import celf_optimized
 
 
 def compute_revenue_naive(S, graph, nodes, alpha):

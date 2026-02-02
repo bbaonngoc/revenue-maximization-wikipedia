@@ -27,6 +27,8 @@ MAX_NODES = 50000
 
 import os
 
-DATA_DIR = os.path.dirname(os.path.abspath(__file__))
-RAW_DATA_PATH = os.path.join(DATA_DIR, "data", "wiki-Talk.txt")
-FILTERED_DATA_PATH = os.path.join(DATA_DIR, "data", "wiki-talk-filtered.txt")
+# Thư mục gốc của dự án (parent của src/)
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(PROJECT_ROOT, "data")
+RAW_DATA_PATH = os.path.join(DATA_DIR, "wiki-Talk.txt")
+FILTERED_DATA_PATH = os.path.join(DATA_DIR, "wiki-talk-filtered.txt")
