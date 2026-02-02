@@ -52,8 +52,7 @@ Nói cách khác, bài toán yêu cầu lựa chọn một tập người dùng 
 
 Trong mạng thảo luận Wikipedia:
 - Các đỉnh đại diện cho người dùng tham gia thảo luận.
-- Trọng số cạnh phản ánh mức độ tương tác hoặc khả năng ảnh hưởng giữa người dùng.
-- Tập seed \(S\) có thể được hiểu là nhóm người dùng được ưu tiên kêu gọi, gợi ý hoặc tác động (ví dụ: vận động quyên góp).
+- Trọng số cạnh phản ánh khả năng ảnh hưởng giữa người dùng.
+- Tập seed \(S\) có thể được hiểu là nhóm người dùng được ưu tiên kêu gọi, gợi ý hoặc tác động.
 
-Bài toán RM giúp trả lời câu hỏi: **Nên lựa chọn những người dùng nào để tối đa hóa doanh thu kỳ vọng (quyên góp) trong khi chi phí tiếp cận là hữu hạn?**
 
