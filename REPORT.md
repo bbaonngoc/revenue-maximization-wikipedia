@@ -6,9 +6,9 @@
 |-----------|----------|
 | **Tên đề tài** | Tối đa hóa doanh thu trên mạng thảo luận Wikipedia |
 | **Sinh viên thực hiện** | Nguyễn Minh Sang, Vũ Thị Diệu Linh, Đỗ Trịnh Lệ Quyên, Tạ Vương Bảo Ngọc |
-| **MSSV** | *(để trống)* |
-| **Lớp** | *(để trống)* |
-| **GVHD** | *(để trống)* |
+| **MSSV** | *23010888, 23010545, 23010485, 23010644* |
+| **Lớp** | *Thuật toán ứng dụng - N01* |
+| **GVHD** | *Th.S Trần Đình Tân* |
 
 ---
 
