@@ -95,7 +95,7 @@ $$c(u) = 1 - e^{-0.2\sqrt{\sum_{(u,v) \in E} w(u,v)}}$$
 
 ### 2.3 Thuật toán Greedy (Baseline)
 
-**Ý tưởng**: Tại mỗi bước, chọn đỉnh có tỉ lệ marginal gain / cost cao nhất.
+**Ý tưởng**: Tại mỗi bước, chọn đỉnh có tỉ lệ marginal gain cao nhất.
 
 **Pseudocode**:
 ```
