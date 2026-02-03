@@ -7,7 +7,7 @@ Cho một mạng xã hội (mạng thảo luận Wikipedia) được mô hình h
   - **V** là tập các đỉnh, mỗi đỉnh tương ứng với một người dùng.
   - **E** là tập các cạnh, mỗi cạnh \((u, v) \in E\) biểu diễn một mối quan hệ/tương tác giữa hai người dùng.
 
-Mỗi cạnh \((u, v)\) được gán một **trọng số dương** \(w(u, v)\), được sinh ngẫu nhiên theo phân phối đều trong khoảng \([0, 1]\). Trọng số này phản ánh cường độ ảnh hưởng hoặc mức độ tương tác giữa hai người dùng.
+Mỗi cạnh (u, v) được gán một **trọng số dương** w(u, v), được sinh ngẫu nhiên theo phân phối đều trong khoảng (0, 1]. Trọng số này phản ánh mức độ ảnh hưởng giữa người dùng u lên v.
 
 ## 2. Chi phí của đỉnh
 
